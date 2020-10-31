@@ -1,12 +1,13 @@
 "use strict";
 
-let start = document.getElementById("start"),
+const start = document.getElementById("start"),
     btnPlus = document.getElementsByTagName("button"),
     cancel = document.querySelector("#cancel"),
     incomePlus = btnPlus[0],
     expensesPlus = btnPlus[1],
-    additionalIncomeItem = document.querySelectorAll(".additional_income-item"),
-    checkBox = document.querySelector("#deposit-check"),
+    checkBox = document.querySelector("#deposit-check");
+    
+let additionalIncomeItem = document.querySelectorAll(".additional_income-item"),
     budgetDayValue = document.getElementsByClassName("budget_day-value")[0],
     budgetMonthValue = document.getElementsByClassName("budget_month-value")[0],
     expensesMonthValue = document.getElementsByClassName("expenses_month-value")[0],
@@ -84,8 +85,7 @@ class AppData {
     }
 
     blocked () {  
-        document.querySelectorAll('.data input[type="text"]');
-        document.forEach(function (item) {
+        document.querySelectorAll('.data input[type="text"]').forEach(function (item) {
             item.disabled = true;
         });
         start.style.display = "none";
